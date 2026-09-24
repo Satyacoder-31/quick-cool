@@ -98,11 +98,11 @@ function initHeroSlider() {
   if (!slides.length) return;
 
   const badgeCaptions = [
-    "⚡ India's #1 Rated AC Service Brand",
-    "🔬 Advanced Digital Diagnostics & OEM Parts",
-    "📐 Precision Spirit-Level AC Installation",
-    "💧 Medical-Grade Foam Jet Wash Cleaning",
-    "🤝 Background-Verified Certified HVAC Engineers"
+    "Vadodara's #1 AC Repair & Service Brand",
+    "Advanced Digital Diagnostics & OEM Parts — Vadodara",
+    "Precision Laser-Level AC Installation — Vadodara",
+    "2X Deep Foam Jet Wash Cleaning — Vadodara",
+    "Certified HVAC Engineers Across Vadodara"
   ];
 
   let currentSlide = 0;
@@ -119,8 +119,10 @@ function initHeroSlider() {
     if (dots[currentSlide]) dots[currentSlide].classList.add('active');
 
     if (dynamicBadge && badgeCaptions[currentSlide]) {
-      const textSpan = dynamicBadge.querySelector('.badge-text') || dynamicBadge;
-      textSpan.textContent = badgeCaptions[currentSlide];
+      const textSpan = dynamicBadge.querySelector('.badge-text');
+      if (textSpan) {
+        textSpan.textContent = badgeCaptions[currentSlide];
+      }
     }
   };
 
