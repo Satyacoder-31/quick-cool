@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AC Knowledge Center & FAQ | QuickCool Expert Cooling Insights</title>
+  <meta name="description" content="Clear, technical answers to common AC questions: why your AC isn't cooling, water leakage causes, gas check frequency, inverter vs non-inverter tips, and power saving guides.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- FAQ Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is my AC not cooling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most common causes of an AC not cooling are clogged indoor/outdoor coils, refrigerant gas leaks, a failed compressor capacitor, or a faulty inverter PCB."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is water leaking from my AC inside the room?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Internal water dripping occurs when the condensate drain pipe is blocked with algae or dust sludge, the unit lacks proper gravity drainage slope, or frozen coils melt rapidly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should an AC be serviced?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Indian metro environments, residential ACs should receive deep power-jet cleaning at least 2 to 3 times per year: once before summer, mid-monsoon, and post-season."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="QuickCool Home">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">QUICKCOOL</span>
+          <span class="brand-tagline">Fast Service. Perfect Comfort.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="ac-repair.html" class="nav-link">Our Services ▾</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="ac-repair.html"><span class="dropdown-icon">🔧</span> AC Repair & Diagnostics</a></li>
+              <li class="dropdown-item"><a href="ac-service.html"><span class="dropdown-icon">💧</span> AC Service & Jet Clean</a></li>
+              <li class="dropdown-item"><a href="installation.html"><span class="dropdown-icon">📐</span> AC Installation & Relocation</a></li>
+              <li class="dropdown-item"><a href="amc.html"><span class="dropdown-icon">🛡️</span> Annual Maintenance (AMC)</a></li>
+              <li class="dropdown-item"><a href="ac-types-brands.html"><span class="dropdown-icon">🏢</span> AC Types & All Brands</a></li>
+              <li class="dropdown-item"><a href="emergency-service.html" style="color:var(--accent-red);"><span class="dropdown-icon">⚡</span> 24/7 Emergency AC Fix</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="emergency-service.html" class="nav-link nav-link-emergency">
+              Emergency <span class="nav-badge-pill">24/7</span>
+            </a>
+          </li>
+          <li class="nav-item"><a href="faq.html" class="nav-link active">FAQ & Guide</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+919876543210" class="header-call-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          +91 98765 43210
+        </a>
+        <a href="#bookingModal" class="btn btn-primary open-booking-modal">Book a Service</a>
+        <button class="mobile-toggle" aria-label="Open Navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
+          </svg>
+        </div>
+        <span class="brand-name" style="color:#FFF;">QUICKCOOL</span>
+      </div>
+      <button class="drawer-close" aria-label="Close Navigation">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li class="mobile-nav-item"><a href="ac-repair.html" class="mobile-nav-link">AC Repair</a></li>
+      <li class="mobile-nav-item"><a href="ac-service.html" class="mobile-nav-link">AC Service & Jet Clean</a></li>
+      <li class="mobile-nav-item"><a href="installation.html" class="mobile-nav-link">AC Installation</a></li>
+      <li class="mobile-nav-item"><a href="amc.html" class="mobile-nav-link">Annual Maintenance (AMC)</a></li>
+      <li class="mobile-nav-item"><a href="ac-types-brands.html" class="mobile-nav-link">AC Types & Brands</a></li>
+      <li class="mobile-nav-item"><a href="emergency-service.html" class="mobile-nav-link" style="color:var(--accent-red);">Emergency AC</a></li>
+      <li class="mobile-nav-item"><a href="faq.html" class="mobile-nav-link active">FAQ & Knowledge</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <img src="images/faq_hero.jpg" alt="QuickCool AC Knowledge Consultation with Technical Diagram" class="page-hero-bg">
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>›</li>
+        <li>Knowledge Center & FAQ</li>
+      </ul>
+      <span class="badge-tag badge-light">Engineering Knowledge Base</span>
+      <h1 class="page-hero-title">AC Knowledge Center &<br><span class="gradient-text">Frequently Asked Questions</span></h1>
+      <p class="page-hero-desc">
+        Empowering homeowners and facility managers with accurate, honest thermodynamic knowledge. Understand why air conditioners fail, how to prevent high power bills, and how our engineers resolve faults.
+      </p>
+    </div>
+  </section>
+
+  <!-- KNOWLEDGE SEARCH & CATEGORY FILTER STRIP -->
+  <section class="section-sm bg-white" style="border-bottom:1px solid var(--border-light);">
+    <div class="container">
+      <div style="max-width:750px; margin:0 auto 32px;">
+        <div style="position:relative;">
+          <input type="text" id="faqSearchInput" class="form-control" placeholder="Search questions (e.g. water leak, gas smell, inverter, noise)..." style="padding-left:48px; height:54px; font-size:1.05rem; border-radius:var(--radius-full); box-shadow:var(--shadow-sm);">
+          <div style="position:absolute; top:50%; left:20px; transform:translateY(-50%); color:var(--primary); font-size:1.2rem;">🔍</div>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px;">
+        <button class="btn btn-sm btn-secondary faq-filter-btn active" data-filter="all">All Topics</button>
+        <button class="btn btn-sm btn-secondary faq-filter-btn" data-filter="repair">AC Repair</button>
+        <button class="btn btn-sm btn-secondary faq-filter-btn" data-filter="cleaning">AC Cleaning</button>
+        <button class="btn btn-sm btn-secondary faq-filter-btn" data-filter="installation">Installation</button>
+        <button class="btn btn-sm btn-secondary faq-filter-btn" data-filter="gas">Gas & Cooling</button>
+        <button class="btn btn-sm btn-secondary faq-filter-btn" data-filter="electrical">Electrical & Inverter</button>
+        <button class="btn btn-sm btn-secondary faq-filter-btn" data-filter="amc">AMC Plans</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION SECTION -->
+  <section class="section bg-ice">
+    <div class="container">
+      <div class="faq-list">
+        
+        <!-- Q1 -->
+        <div class="faq-item" data-category="repair cooling gas">
+          <button class="faq-question">
+            <span>1. Why is my AC not cooling even though it is running?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p>If the indoor unit fan is blowing air but the room doesn’t get cold, the top four culprits are:</p>
+            <ul style="margin:8px 0 8px 20px;">
+              <li><strong>Clogged outdoor condenser coils:</strong> Dust prevents the unit from expelling indoor heat outside.</li>
+              <li><strong>Low refrigerant gas:</strong> Caused by a micro-leak in the copper piping or flare nuts.</li>
+              <li><strong>Faulty compressor capacitor:</strong> The outdoor fan turns, but the compressor pump never starts.</li>
+              <li><strong>Thermostat sensor miscalibration:</strong> The unit falsely thinks the room has already reached 24°C.</li>
+            </ul>
+            <p>Our technician will connect digital manifold gauges to verify suction and discharge pressure within 10 minutes of arrival.</p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item" data-category="repair cleaning">
+          <button class="faq-question">
+            <span>2. Why is water leaking from my AC indoor unit inside the room?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p>When warm room air hits cold cooling coils, moisture condenses and drops into an internal plastic drain tray. Water leaks inside when:</p>
+            <ul style="margin:8px 0 8px 20px;">
+              <li>The drain pipe is blocked by thick algae, mold sludge, or dirt.</li>
+              <li>The indoor unit was improperly mounted without a slight downward gravity tilt toward the drain side.</li>
+              <li>The evaporator coil is freezing due to low gas and overflowing when the ice thaws.</li>
+            </ul>
+            <p>QuickCool clears blockages with high-pressure nitrogen flushes and corrects mounting slope using precision laser levels.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item" data-category="cleaning amc">
+          <button class="faq-question">
+            <span>3. How often should an air conditioner be serviced?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p>In high-dust, tropical metro climates, we recommend:</p>
+            <ul style="margin:8px 0 8px 20px;">
+              <li><strong>Filter cleaning:</strong> Homeowners should rinse dust filters every 30 days.</li>
+              <li><strong>Comprehensive power-jet deep service:</strong> Every <strong>3 to 4 months</strong> (minimum 2 times annually — before summer and post-monsoon).</li>
+              <li><strong>Commercial units / offices:</strong> Servicing every <strong>60 to 90 days</strong> due to continuous 10+ hour daily operational runtime.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item" data-category="gas repair">
+          <button class="faq-question">
+            <span>4. When should AC refrigerant gas be checked or refilled?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Myth Buster:</strong> Air conditioners do NOT consume refrigerant like car fuel. An AC is a hermetically sealed closed circuit. If your gas is low, there is an active physical leak.</p>
+            <p>You should check gas only if: cooling takes over 45 minutes, ice forms on the thin outdoor copper pipe, or you hear a mild continuous hissing sound. QuickCool performs a nitrogen bubble leak test, fixes the puncture, and vacuum refills by exact gram weight.</p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item" data-category="cleaning repair">
+          <button class="faq-question">
+            <span>5. Why does my AC blow a foul or musty smell?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p>A foul smell is typically caused by microbial mold and bacterial colonies growing in the dark, damp crevices of the evaporator coil and drain pan (often called 'Dirty Sock Syndrome'). In some cases, decomposing rodents or insects in the outdoor ducting cause acrid odours. QuickCool applies hospital-grade antimicrobial chemical foam that dissolves organic buildup and leaves fresh, sanitized air.</p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item" data-category="repair electrical">
+          <button class="faq-question">
+            <span>6. Why is my AC making loud rattling, vibrating, or squeaking noises?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p>Different noises indicate distinct physical problems:</p>
+            <ul style="margin:8px 0 8px 20px;">
+              <li><strong>Rattling:</strong> Loose wall mounting bracket or loose front casing grill.</li>
+              <li><strong>High-pitched squealing:</strong> Worn-out blower motor sleeve bearings.</li>
+              <li><strong>Vibrating hum:</strong> Outdoor compressor anti-vibration rubber grommets have deteriorated.</li>
+              <li><strong>Clicking noise:</strong> Electrical relay attempting to engage a locked compressor.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="faq-item" data-category="installation">
+          <button class="faq-question">
+            <span>7. How long does professional AC installation take?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p>A standard residential split AC installation by a certified QuickCool 2-person crew takes approximately <strong>90 to 120 minutes</strong>. This includes core wall drilling, leveling, bracket anchoring, copper line flare fitting, double-stage vacuum degassing, and 15 minutes of live temperature testing.</p>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="faq-item" data-category="electrical">
+          <button class="faq-question">
+            <span>8. Should I choose an Inverter AC or a Non-Inverter AC?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p>For rooms used more than 4 to 5 hours daily, an <strong>Inverter AC is vastly superior</strong>. Non-inverter ACs run at 100% capacity and repeatedly turn on/off, consuming high spike amperage. Inverter ACs dynamically throttle the twin-rotary compressor down to 20% capacity once the room cools, cutting monthly electricity costs by <strong>30% to 50%</strong> while maintaining rock-steady temperatures.</p>
+          </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="faq-item" data-category="electrical cleaning">
+          <button class="faq-question">
+            <span>9. How can I reduce my AC electricity consumption by up to 25%?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p>Follow these 4 proven engineering tips:</p>
+            <ul style="margin:8px 0 8px 20px;">
+              <li><strong>Set thermostat to 24°C:</strong> Every 1°C increase above 18°C saves roughly 6% power consumption. Bureau of Energy Efficiency (BEE) rates 24°C as ideal thermal comfort.</li>
+              <li><strong>Run ceiling fan on low speed:</strong> Circulates cool air downwards, eliminating warm thermal stratification pockets.</li>
+              <li><strong>Clean coils every 90 days:</strong> A dirty condenser forces the compressor to run 30% longer per cycle.</li>
+              <li><strong>Block direct solar heat:</strong> Close heavy curtains on south-facing windows during peak daytime sun.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="faq-item" data-category="repair installation amc">
+          <button class="faq-question">
+            <span>10. When should I repair versus replace an aging air conditioner?</span>
+            <div class="faq-toggle-icon">▾</div>
+          </button>
+          <div class="faq-answer">
+            <p>Consider replacing your unit if:</p>
+            <ul style="margin:8px 0 8px 20px;">
+              <li>The AC is over <strong>8 to 10 years old</strong> and utilizes obsolete R22 refrigerant.</li>
+              <li>The estimated repair cost (e.g. failed compressor or multiple coil leaks) exceeds <strong>50% of the cost of a new 5-star inverter unit</strong>.</li>
+              <li>Your monthly electricity bills have climbed steeply due to irreversible compressor degradation.</li>
+            </ul>
+            <p>QuickCool technicians will give you an objective financial assessment before performing high-ticket repairs.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section bg-white" style="padding-bottom:0;">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">Still Have Questions About Your AC?</h2>
+        <p class="cta-banner-desc">Speak directly with our senior cooling technical supervisor for free expert guidance.</p>
+        <div class="cta-banner-actions">
+          <a href="tel:+919876543210" class="btn btn-secondary btn-lg">Call Technical Supervisor</a>
+          <a href="#bookingModal" class="btn btn-outline-white btn-lg open-booking-modal">Schedule Inspection</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom:12px;">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
+              </svg>
+            </div>
+            <span class="brand-name" style="color:#FFF;">QUICKCOOL</span>
+          </a>
+          <p class="footer-brand-desc">QuickCool AC Knowledge Center & Doorstep HVAC Services. Fast Service. Perfect Comfort.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="index.html">Home</a></li>
+            <li class="footer-link"><a href="about.html">About QuickCool</a></li>
+            <li class="footer-link"><a href="faq.html">AC Knowledge Center</a></li>
+            <li class="footer-link"><a href="contact.html">Contact & Bookings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="ac-repair.html">Split AC Repair</a></li>
+            <li class="footer-link"><a href="ac-service.html">Power Jet Deep Clean</a></li>
+            <li class="footer-link"><a href="installation.html">New AC Installation</a></li>
+            <li class="footer-link"><a href="amc.html">Corporate AMC Plans</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact QuickCool</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">📞</span>
+              <div><strong>Helpline:</strong> <a href="tel:+919876543210" style="color:#FFF;">+91 98765 43210</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">💬</span>
+              <div><strong>WhatsApp:</strong> <a href="https://wa.me/919876543210" style="color:var(--accent-green);">+91 98765 43210</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 QuickCool HVAC Solutions Pvt Ltd. All Rights Reserved.</div>
+        <div class="footer-legal-links"><a href="#">Privacy Policy</a> <a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating & Modals -->
+  <a href="https://wa.me/919876543210?text=Hi%20QuickCool,%20I%20have%20an%20AC%20question" class="floating-whatsapp" target="_blank" aria-label="WhatsApp QuickCool">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.134 8.134 0 0 1-1.25-4.29c0-4.5 3.66-8.16 8.16-8.16 2.18 0 4.23.85 5.77 2.39a8.11 8.11 0 0 1 2.39 5.77c0 4.5-3.66 8.14-8.17 8.14zm4.47-6.1c-.24-.12-1.45-.72-1.68-.8-.23-.08-.39-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.2-.53.08-.24-.12-1.03-.38-1.96-1.21-.73-.65-1.22-1.45-1.36-1.7-.14-.24-.01-.38.11-.5.11-.11.24-.29.37-.43.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43s-.56-1.35-.77-1.85c-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.76 2.68 4.25 3.76.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.45-.59 1.66-1.16.2-.57.2-1.06.14-1.16-.06-.11-.22-.17-.46-.29z"/></svg>
+  </a>
+
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919876543210" class="mobile-bottom-btn mobile-bottom-call"><span>📞</span> Call</a>
+    <a href="https://wa.me/919876543210" class="mobile-bottom-btn mobile-bottom-wa"><span>💬</span> WhatsApp</a>
+    <a href="#bookingModal" class="mobile-bottom-btn mobile-bottom-book open-booking-modal"><span>📅</span> Book Now</a>
+  </div>
+
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close Modal">&times;</button>
+      <div class="booking-container">
+        <form class="booking-form" id="bookingForm">
+          <div style="margin-bottom:24px; text-align:center;">
+            <span class="badge-tag">Expert Doorstep Service</span>
+            <h3 style="font-size:1.6rem; font-weight:800; color:var(--dark); margin-top:6px;">Book an AC Service</h3>
+            <p style="font-size:0.9rem; color:var(--text-muted);">A certified QuickCool technician will be dispatched to your location.</p>
+          </div>
+          <div class="form-fields-container form-grid">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" name="name" class="form-control" placeholder="e.g. Arvind Mehta" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" name="phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Service Type *</label>
+              <select name="service_type" class="form-control" required>
+                <option value="AC Repair">AC Repair & Diagnostics</option>
+                <option value="AC Jet Service">Power Jet Deep Cleaning</option>
+                <option value="AC Installation">New AC Installation</option>
+                <option value="AMC Plan">Annual Maintenance (AMC)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">AC Brand</label>
+              <select name="brand" class="form-control">
+                <option value="Daikin">Daikin</option>
+                <option value="Voltas">Voltas</option>
+                <option value="LG">LG</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Other">Other Brand</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label">Location / Address *</label>
+              <input type="text" name="address" class="form-control" placeholder="House/Flat No, Apartment Name, Street, Landmark" required>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Dispatch Technician</button>
+            </div>
+          </div>
+        </form>
+        <div class="success-message-box">
+          <div class="success-icon-check">✓</div>
+          <h3 style="font-size:1.8rem; font-weight:800; color:var(--dark); margin-bottom:12px;">Request Received!</h3>
+          <p style="font-size:1.05rem; color:var(--text-muted); line-height:1.6; max-width:480px; margin:0 auto 24px;">
+            Thank you! A QuickCool coordinator will contact you in under <strong>5 minutes</strong>.
+          </p>
+          <button class="btn btn-secondary" data-close-modal>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

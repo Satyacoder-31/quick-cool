@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional AC Service & Maintenance | QuickCool Deep Cleaning</title>
+  <meta name="description" content="Experience hospital-grade AC deep cleaning with QuickCool. 2X high-pressure jet wash, antimicrobial foam, zero indoor wall mess, and up to 30% lower electricity bills.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AC Deep Cleaning & Jet Servicing",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "QuickCool"
+    },
+    "serviceType": "HVAC Maintenance",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "description": "Starting from ₹____ (Transparent Rate Card)"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="QuickCool Home">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">QUICKCOOL</span>
+          <span class="brand-tagline">Fast Service. Perfect Comfort.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="ac-service.html" class="nav-link active">Our Services ▾</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="ac-repair.html"><span class="dropdown-icon">🔧</span> AC Repair & Diagnostics</a></li>
+              <li class="dropdown-item"><a href="ac-service.html" style="color:var(--primary);"><span class="dropdown-icon">💧</span> AC Service & Jet Clean</a></li>
+              <li class="dropdown-item"><a href="installation.html"><span class="dropdown-icon">📐</span> AC Installation & Relocation</a></li>
+              <li class="dropdown-item"><a href="amc.html"><span class="dropdown-icon">🛡️</span> Annual Maintenance (AMC)</a></li>
+              <li class="dropdown-item"><a href="ac-types-brands.html"><span class="dropdown-icon">🏢</span> AC Types & All Brands</a></li>
+              <li class="dropdown-item"><a href="emergency-service.html" style="color:var(--accent-red);"><span class="dropdown-icon">⚡</span> 24/7 Emergency AC Fix</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="emergency-service.html" class="nav-link nav-link-emergency">
+              Emergency <span class="nav-badge-pill">24/7</span>
+            </a>
+          </li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ & Guide</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+919876543210" class="header-call-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          +91 98765 43210
+        </a>
+        <a href="#bookingModal" class="btn btn-primary open-booking-modal">Book AC Service</a>
+        <button class="mobile-toggle" aria-label="Open Navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
+          </svg>
+        </div>
+        <span class="brand-name" style="color:#FFF;">QUICKCOOL</span>
+      </div>
+      <button class="drawer-close" aria-label="Close Navigation">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li class="mobile-nav-item"><a href="ac-repair.html" class="mobile-nav-link">AC Repair</a></li>
+      <li class="mobile-nav-item"><a href="ac-service.html" class="mobile-nav-link active">AC Service & Jet Clean</a></li>
+      <li class="mobile-nav-item"><a href="installation.html" class="mobile-nav-link">AC Installation</a></li>
+      <li class="mobile-nav-item"><a href="amc.html" class="mobile-nav-link">Annual Maintenance (AMC)</a></li>
+      <li class="mobile-nav-item"><a href="ac-types-brands.html" class="mobile-nav-link">AC Types & Brands</a></li>
+      <li class="mobile-nav-item"><a href="emergency-service.html" class="mobile-nav-link" style="color:var(--accent-red);">Emergency AC</a></li>
+      <li class="mobile-nav-item"><a href="faq.html" class="mobile-nav-link">FAQ & Knowledge</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <img src="images/hero_slide_4.jpg" alt="QuickCool Precision AC Jet Wash Deep Cleaning" class="page-hero-bg">
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>›</li>
+        <li>Services</li>
+        <li>›</li>
+        <li>AC Service & Maintenance</li>
+      </ul>
+      <span class="badge-tag badge-light">Hospital-Grade Deep Cleaning Protocol</span>
+      <h1 class="page-hero-title">Deep AC Cleaning.<br><span class="gradient-text">Better Performance.</span></h1>
+      <p class="page-hero-desc">
+        Dust and biofilm choking your cooling coils forces your compressor to run 35% harder, spiking electricity bills. QuickCool’s pressure jet cleaning restores 100% cooling power with zero mess inside your home.
+      </p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="#bookingModal" class="btn btn-primary btn-lg open-booking-modal">Schedule Jet Service</a>
+        <a href="tel:+919876543210" class="btn btn-outline-white btn-lg">Call: +91 98765 43210</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY AC SERVICING MATTERS -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag">The Science of Servicing</span>
+        <h2 class="section-title">Why Regular AC Servicing<br><span class="gradient-text">Is Essential For Your Home</span></h2>
+        <p class="section-desc">An unserviced AC doesn't just cool poorly — it recirculates allergens and wastes thousands of rupees every month in electricity.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🌬️</div>
+          <h3 class="benefit-title">Pure, Clean Breathing Air</h3>
+          <p class="benefit-desc">Our antimicrobial foam wash purges black mold spores, bacteria, pollen, and trapped fine PM2.5 particulates from deep within the cooling fins.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3 class="benefit-title">Up to 30% Lower Power Bills</h3>
+          <p class="benefit-desc">Unclogged coils allow unrestricted heat exchange. The compressor cuts off up to 15 minutes faster per cycle, dramatically trimming monthly electricity costs.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">❄️</div>
+          <h3 class="benefit-title">Instant Ice-Cold Chilling</h3>
+          <p class="benefit-desc">Restores the factory-designed airflow CFM and grille discharge temperature to between 14°C and 16°C for near-instant room cooling.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🛡️</div>
+          <h3 class="benefit-title">Extends Compressor Lifespan</h3>
+          <p class="benefit-desc">Compressor overheating caused by dirty outdoor condenser fins is the #1 cause of fatal AC burnouts. Deep servicing protects your most expensive part.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">💧</div>
+          <h3 class="benefit-title">Zero Water Dripping On Walls</h3>
+          <p class="benefit-desc">We flush the internal drain trap and condensate tubing with high-velocity water jets to prevent sludge accumulation that causes room wall stains.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🤫</div>
+          <h3 class="benefit-title">Whisper-Quiet Operation</h3>
+          <p class="benefit-desc">Cleaning dust caked onto the cylindrical cross-flow blower fan restores dynamic balance, eliminating subtle vibrations and high-speed whining noises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 SERVICE SCOPES COVERED -->
+  <section class="section bg-ice">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag">Exhaustive Checklist</span>
+        <h2 class="section-title">What Is Covered in a <span class="gradient-text">QuickCool Service</span></h2>
+        <p class="section-desc">We leave nothing to chance. Every standard servicing includes our comprehensive 8-stage treatment.</p>
+      </div>
+
+      <div class="problems-grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="problem-card">
+          <div class="problem-icon-wrap">🧼</div>
+          <h4 class="problem-name">Routine Sanitization</h4>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Front louvers, swing vanes, and cabinet disinfectant wipe.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon-wrap">🕸️</div>
+          <h4 class="problem-name">Filter Deep Jet Wash</h4>
+          <p style="font-size:0.8rem; color:var(--text-muted);">High-pressure water clean of high-density nylon filters.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon-wrap">🧊</div>
+          <h4 class="problem-name">Evaporator Coil Clean</h4>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Antimicrobial foam wash across delicate aluminium cooling fins.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon-wrap">💧</div>
+          <h4 class="problem-name">Drain Tray Flushing</h4>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Clearing algae buildup and verifying continuous gravity slope.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon-wrap">🏠</div>
+          <h4 class="problem-name">Indoor Unit Jacket</h4>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Waterproof funnel apron ensures zero droplet touches your wall.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon-wrap">🏙️</div>
+          <h4 class="problem-name">Outdoor Condenser Wash</h4>
+          <p style="font-size:0.8rem; color:var(--text-muted);">High-pressure exterior wash removing baked-on urban smog.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon-wrap">🌡️</div>
+          <h4 class="problem-name">Thermal Check</h4>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Laser thermometer verification of supply & return delta temperature.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon-wrap">⚡</div>
+          <h4 class="problem-name">Electrical Audit</h4>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Testing running amps, earthing integrity, and capacitor health.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE BEFORE & AFTER SECTION -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag">Visual Proof of Cleanliness</span>
+        <h2 class="section-title">Before & After <span class="gradient-text">Coil Deep Cleaning</span></h2>
+        <p class="section-desc">Drag the interactive slider below to see how QuickCool's high-pressure foam jet wash transforms heavily clogged cooling coils into factory-fresh condition.</p>
+      </div>
+
+      <div class="comparison-container">
+        <!-- After Image (Clean) -->
+        <div class="comp-img-layer">
+          <img src="images/hero_slide_4.jpg" alt="Clean AC Coil After QuickCool Jet Cleaning" class="comp-img">
+        </div>
+
+        <!-- Before Image (Dirty Overlay) -->
+        <div class="comp-overlay-layer">
+          <img src="images/repair_hero.jpg" alt="Dirty Dusty AC Unit Before Servicing" class="comp-overlay-img" style="filter: sepia(0.6) brightness(0.65) contrast(1.2);">
+        </div>
+
+        <!-- Draggable Handle -->
+        <div class="comp-slider-handle">
+          <span>⇄</span>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; max-width:900px; margin:16px auto 0; font-family:var(--font-heading); font-weight:700; font-size:0.95rem;">
+        <span style="color:var(--text-muted);">◀ Drag Left: Dirty Clogged State</span>
+        <span style="color:var(--primary);">QuickCool Sparkling Clean State ▶</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6-STEP AC SERVICE PROCESS -->
+  <section class="section bg-ice">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag">Standard Operating Procedure</span>
+        <h2 class="section-title">The 6-Step <span class="gradient-text">Service Protocol</span></h2>
+        <p class="section-desc">Our standardized 45-minute service workflow executed by certified QuickCool technicians.</p>
+      </div>
+
+      <div class="process-grid" style="grid-template-columns:repeat(6, 1fr);">
+        <div class="process-card">
+          <div class="process-step-num">1</div>
+          <div class="process-icon">📋</div>
+          <h4 class="process-title" style="font-size:1rem;">Pre-Check</h4>
+          <p class="process-desc">Initial temperature, electrical voltage & gas pressure baseline audit.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">2</div>
+          <div class="process-icon">🛡️</div>
+          <h4 class="process-title" style="font-size:1rem;">Protection</h4>
+          <p class="process-desc">Floor sheets placed and waterproof catch jacket mounted over AC.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">3</div>
+          <div class="process-icon">🧼</div>
+          <h4 class="process-title" style="font-size:1rem;">Foam Wash</h4>
+          <p class="process-desc">Antimicrobial chemical foam applied to break down stubborn grime.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">4</div>
+          <div class="process-icon">💧</div>
+          <h4 class="process-title" style="font-size:1rem;">High-Jet</h4>
+          <p class="process-desc">2X pressure water jet wash rinsing coils, blower fan & drain tray.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">5</div>
+          <div class="process-icon">🏙️</div>
+          <h4 class="process-title" style="font-size:1rem;">Outdoor Unit</h4>
+          <p class="process-desc">Condenser fin pressure rinse restoring optimal heat ejection.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">6</div>
+          <div class="process-icon">❄️</div>
+          <h4 class="process-title" style="font-size:1rem;">Post-Audit</h4>
+          <p class="process-desc">Final temperature logging, room cleanup, and digital service sign-off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE PACKAGES (EDITABLE PRICING CARDS) -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag">Transparent Service Packages</span>
+        <h2 class="section-title">Choose Your <span class="gradient-text">AC Service Package</span></h2>
+        <p class="section-desc">Upfront, standardized pricing with zero hidden charges. Select a plan to book your technician.</p>
+      </div>
+
+      <div class="amc-grid">
+        <!-- Package 1 -->
+        <div class="amc-card">
+          <h3 class="amc-plan-name">Standard Jet Service</h3>
+          <p class="amc-plan-desc">Ideal for routine seasonal maintenance and mildly dusty AC units.</p>
+          <div class="amc-price">Starting from ₹____ <span>/ Unit</span></div>
+          <ul class="amc-features-list">
+            <li class="amc-feature-item"><span class="amc-check">✓</span> High-pressure water jet cleaning</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> Indoor filter & grill wash</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> Drain pipe sludge clearing</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> Outdoor condenser water wash</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> 30-Day post-service guarantee</li>
+          </ul>
+          <a href="#bookingModal" class="btn btn-secondary open-booking-modal" style="width:100%;">Book Standard Service</a>
+        </div>
+
+        <!-- Package 2 (Featured) -->
+        <div class="amc-card featured">
+          <div class="popular-badge">MOST POPULAR</div>
+          <h3 class="amc-plan-name">Power Jet Foam Service</h3>
+          <p class="amc-plan-desc">Our signature hospital-grade deep clean for maximum cooling and zero odor.</p>
+          <div class="amc-price">Starting from ₹____ <span>/ Unit</span></div>
+          <ul class="amc-features-list">
+            <li class="amc-feature-item"><span class="amc-check">✓</span> Everything in Standard Service</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> <strong>Antimicrobial chemical foam wash</strong></li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> <strong>Deep cross-flow blower fan cleaning</strong></li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> Gas pressure & ampere load audit</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> <strong>60-Day extended cooling warranty</strong></li>
+          </ul>
+          <a href="#bookingModal" class="btn btn-primary open-booking-modal" style="width:100%;">Book Power Jet Service</a>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="amc-card">
+          <h3 class="amc-plan-name">Master Overhaul Service</h3>
+          <p class="amc-plan-desc">Complete disassembly service for heavily neglected or severely under-cooling units.</p>
+          <div class="amc-price">Starting from ₹____ <span>/ Unit</span></div>
+          <ul class="amc-features-list">
+            <li class="amc-feature-item"><span class="amc-check">✓</span> Complete indoor unit dismounting</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> 360° front & back coil chemical dip</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> Blower fan bearing re-lubrication</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> Complete nitrogen pressure leak test</li>
+            <li class="amc-feature-item"><span class="amc-check">✓</span> <strong>90-Day full service guarantee</strong></li>
+          </ul>
+          <a href="#bookingModal" class="btn btn-secondary open-booking-modal" style="width:100%;">Book Master Overhaul</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section bg-white" style="padding-bottom:0;">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">Restore Your AC to Ice-Cold Performance</h2>
+        <p class="cta-banner-desc">Book a professional power jet service today and experience up to 30% lower power bills.</p>
+        <div class="cta-banner-actions">
+          <a href="#bookingModal" class="btn btn-secondary btn-lg open-booking-modal">Schedule Service Now</a>
+          <a href="tel:+919876543210" class="btn btn-outline-white btn-lg">Call: +91 98765 43210</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom:12px;">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
+              </svg>
+            </div>
+            <span class="brand-name" style="color:#FFF;">QUICKCOOL</span>
+          </a>
+          <p class="footer-brand-desc">QuickCool is India's leading premium air conditioning repair, servicing, installation, and AMC maintenance company.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="index.html">Home</a></li>
+            <li class="footer-link"><a href="about.html">About QuickCool</a></li>
+            <li class="footer-link"><a href="ac-service.html">AC Service & Maintenance</a></li>
+            <li class="footer-link"><a href="amc.html">Annual Maintenance Plans</a></li>
+            <li class="footer-link"><a href="contact.html">Contact & Bookings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="ac-repair.html">Split AC Repair</a></li>
+            <li class="footer-link"><a href="ac-service.html">Power Jet Deep Clean</a></li>
+            <li class="footer-link"><a href="installation.html">New AC Installation</a></li>
+            <li class="footer-link"><a href="amc.html">Corporate AMC Plans</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact QuickCool</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">📞</span>
+              <div><strong>Helpline:</strong> <a href="tel:+919876543210" style="color:#FFF;">+91 98765 43210</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">💬</span>
+              <div><strong>WhatsApp:</strong> <a href="https://wa.me/919876543210" style="color:var(--accent-green);">+91 98765 43210</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 QuickCool HVAC Solutions Pvt Ltd. All Rights Reserved.</div>
+        <div class="footer-legal-links"><a href="#">Privacy Policy</a> <a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating & Modals -->
+  <a href="https://wa.me/919876543210?text=Hi%20QuickCool,%20I%20want%20to%20book%20an%20AC%20jet%20service" class="floating-whatsapp" target="_blank" aria-label="WhatsApp QuickCool">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.134 8.134 0 0 1-1.25-4.29c0-4.5 3.66-8.16 8.16-8.16 2.18 0 4.23.85 5.77 2.39a8.11 8.11 0 0 1 2.39 5.77c0 4.5-3.66 8.14-8.17 8.14zm4.47-6.1c-.24-.12-1.45-.72-1.68-.8-.23-.08-.39-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.2-.53.08-.24-.12-1.03-.38-1.96-1.21-.73-.65-1.22-1.45-1.36-1.7-.14-.24-.01-.38.11-.5.11-.11.24-.29.37-.43.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43s-.56-1.35-.77-1.85c-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.76 2.68 4.25 3.76.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.45-.59 1.66-1.16.2-.57.2-1.06.14-1.16-.06-.11-.22-.17-.46-.29z"/></svg>
+  </a>
+
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919876543210" class="mobile-bottom-btn mobile-bottom-call"><span>📞</span> Call</a>
+    <a href="https://wa.me/919876543210" class="mobile-bottom-btn mobile-bottom-wa"><span>💬</span> WhatsApp</a>
+    <a href="#bookingModal" class="mobile-bottom-btn mobile-bottom-book open-booking-modal"><span>📅</span> Book Service</a>
+  </div>
+
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close Modal">&times;</button>
+      <div class="booking-container">
+        <form class="booking-form" id="bookingForm">
+          <div style="margin-bottom:24px; text-align:center;">
+            <span class="badge-tag">Quick Doorstep Booking</span>
+            <h3 style="font-size:1.6rem; font-weight:800; color:var(--dark); margin-top:6px;">Book AC Service</h3>
+            <p style="font-size:0.9rem; color:var(--text-muted);">A certified QuickCool technician will be dispatched with complete jet wash equipment.</p>
+          </div>
+          <div class="form-fields-container form-grid">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" name="name" class="form-control" placeholder="e.g. Arvind Mehta" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" name="phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Service Required *</label>
+              <select name="service_type" class="form-control" required>
+                <option value="AC Jet Service" selected>Power Jet Deep Cleaning</option>
+                <option value="AC Repair">AC Repair & Diagnostics</option>
+                <option value="AC Installation">New AC Installation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Number of ACs</label>
+              <select name="units_count" class="form-control">
+                <option value="1">1 Unit</option>
+                <option value="2">2 Units</option>
+                <option value="3">3 Units</option>
+                <option value="4+">4 or More Units</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label">Address & Landmark *</label>
+              <input type="text" name="address" class="form-control" placeholder="House/Flat No, Apartment Name, Street, Landmark" required>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Confirm & Schedule Service</button>
+            </div>
+          </div>
+        </form>
+        <div class="success-message-box">
+          <div class="success-icon-check">✓</div>
+          <h3 style="font-size:1.8rem; font-weight:800; color:var(--dark); margin-bottom:12px;">Service Scheduled!</h3>
+          <p style="font-size:1.05rem; color:var(--text-muted); line-height:1.6; max-width:480px; margin:0 auto 24px;">
+            Thank you! Our QuickCool team will contact you in under <strong>5 minutes</strong> to confirm technician dispatch.
+          </p>
+          <button class="btn btn-secondary" data-close-modal>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
