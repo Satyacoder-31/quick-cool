@@ -942,58 +942,21 @@ button, input, select, textarea {
   display: block;
 }
 
-/* Slider Controls (Dots & Arrows) */
+/* Slider Controls (Dots & Arrows) — hidden on all devices */
 .slider-controls {
-  position: absolute;
-  bottom: 24px;
-  right: 32px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  z-index: 20;
+  display: none !important;
 }
 
 .slider-dots {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+  display: none !important;
 }
 
 .dot {
-  width: 28px;
-  height: 5px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.dot.active {
-  width: 48px;
-  background: var(--secondary);
-  box-shadow: 0 0 10px rgba(0, 184, 217, 0.6);
+  display: none !important;
 }
 
 .slider-arrow {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  backdrop-filter: blur(6px);
-}
-
-.slider-arrow:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-  transform: scale(1.08);
+  display: none !important;
 }
 
 /* Quick Floating Bar over Hero */
@@ -2431,24 +2394,7 @@ textarea.form-control {
   .service-desc {
     font-size: 0.68rem;
   }
-  .slider-controls {
-    position: static;
-    justify-content: center;
-    margin-top: 16px;
-  }
-  .slider-arrow {
-    display: none;
-  }
-  .slider-dots {
-    gap: 6px;
-  }
-  .dot {
-    width: 22px;
-    height: 4px;
-  }
-  .dot.active {
-    width: 36px;
-  }
+  /* Slider controls hidden (no dots/arrows on mobile either) */
 
   /* Inner Page Hero Mobile */
   .page-hero {

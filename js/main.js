@@ -107,7 +107,7 @@ function initHeroSlider() {
 
   let currentSlide = 0;
   let slideInterval = null;
-  const slideDuration = 3000; // 3 seconds per requirements
+  const slideDuration = 4500; // 4.5 seconds per slide
 
   const goToSlide = (index) => {
     slides[currentSlide].classList.remove('active');
