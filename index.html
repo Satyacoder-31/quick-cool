@@ -13,7 +13,128 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=4.0">
+  <style>
+    /* Critical fallback for 4-part hero ratings */
+    .hero-ratings-quad {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 16px !important;
+      margin-top: 28px !important;
+      width: 100% !important;
+    }
+    .rating-quad-card {
+      background: rgba(7, 26, 43, 0.78) !important;
+      border: 1px solid rgba(255, 255, 255, 0.16) !important;
+      border-radius: 14px !important;
+      padding: 16px 14px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 13px !important;
+      backdrop-filter: blur(14px) !important;
+      -webkit-backdrop-filter: blur(14px) !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rating-quad-card:hover {
+      transform: translateY(-4px) !important;
+      border-color: #00B8D9 !important;
+      box-shadow: 0 12px 28px rgba(0, 184, 217, 0.25) !important;
+    }
+    .quad-icon-wrap {
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 12px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+    .quad-gold { background: rgba(255, 215, 0, 0.15) !important; color: #FFD700 !important; border: 1px solid rgba(255, 215, 0, 0.32) !important; }
+    .quad-cyan { background: rgba(0, 184, 217, 0.15) !important; color: #00B8D9 !important; border: 1px solid rgba(0, 184, 217, 0.32) !important; }
+    .quad-green { background: rgba(32, 201, 151, 0.15) !important; color: #20C997 !important; border: 1px solid rgba(32, 201, 151, 0.32) !important; }
+    .quad-orange { background: rgba(255, 127, 80, 0.15) !important; color: #FF7F50 !important; border: 1px solid rgba(255, 127, 80, 0.32) !important; }
+    .quad-content { flex: 1 !important; }
+    .quad-value { font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important; font-size: 1.25rem !important; font-weight: 800 !important; color: #FFFFFF !important; line-height: 1.2 !important; }
+    .quad-stars { color: #FFD700 !important; font-size: 0.95rem !important; letter-spacing: 1px !important; }
+    .quad-highlight { color: #00B8D9 !important; }
+    .quad-title { font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important; font-size: 0.78rem !important; font-weight: 700 !important; color: #E2E8F0 !important; text-transform: uppercase !important; letter-spacing: 0.5px !important; margin-top: 2px !important; }
+    .quad-desc { font-size: 0.7rem !important; color: #94A3B8 !important; font-weight: 500 !important; margin-top: 2px !important; }
+
+    /* Critical fallback for 4-zone aligned coverage directory */
+    .vadodara-coverage-section { background-color: #F4FAFF !important; }
+    .vadodara-zones-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 20px !important;
+      margin-bottom: 36px !important;
+    }
+    .zone-column-card {
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(8, 119, 201, 0.12) !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 14px rgba(7, 26, 43, 0.05) !important;
+      overflow: hidden !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .zone-column-card:hover {
+      transform: translateY(-4px) !important;
+      border-color: #00B8D9 !important;
+      box-shadow: 0 8px 24px rgba(7, 26, 43, 0.08) !important;
+    }
+    .zone-card-header {
+      background: linear-gradient(135deg, rgba(8, 119, 201, 0.08) 0%, rgba(0, 184, 217, 0.05) 100%) !important;
+      border-bottom: 1px solid rgba(8, 119, 201, 0.12) !important;
+      padding: 16px 18px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 4px !important;
+    }
+    .zone-badge { font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important; font-size: 1.02rem !important; font-weight: 800 !important; color: #071A2B !important; }
+    .zone-dispatch-time { font-size: 0.75rem !important; font-weight: 600 !important; color: #059669 !important; }
+    .zone-locations-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+    .zone-location-item {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 12px 18px !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+      transition: background 0.2s ease !important;
+    }
+    .zone-location-item:last-child { border-bottom: none !important; }
+    .zone-location-item:hover { background: #EBF5FC !important; }
+    .zone-loc-bullet { width: 7px !important; height: 7px !important; border-radius: 50% !important; background: #0877C9 !important; margin-right: 10px !important; flex-shrink: 0 !important; }
+    .zone-loc-name { font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important; font-size: 0.92rem !important; font-weight: 600 !important; color: #1E293B !important; flex: 1 !important; }
+    .zone-loc-tag { font-size: 0.68rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.5px !important; padding: 3px 8px !important; border-radius: 9999px !important; background: rgba(8, 119, 201, 0.1) !important; color: #0877C9 !important; }
+    .zone-hotline-card {
+      background: linear-gradient(135deg, #071A2B 0%, #0F3354 100%) !important;
+      border-radius: 14px !important;
+      padding: 24px 30px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 24px !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 16px 40px rgba(7, 26, 43, 0.12) !important;
+      flex-wrap: wrap !important;
+    }
+    .hotline-card-info { flex: 1 !important; min-width: 280px !important; }
+    .hotline-title { font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important; font-size: 1.15rem !important; font-weight: 800 !important; margin-bottom: 6px !important; display: flex !important; align-items: center !important; gap: 8px !important; color: #FFFFFF !important; }
+    .hotline-subtitle { font-size: 0.9rem !important; color: #CBD5E1 !important; margin: 0 !important; line-height: 1.5 !important; }
+    .hotline-card-actions { display: flex !important; align-items: center !important; gap: 12px !important; flex-wrap: wrap !important; }
+
+    @media (max-width: 900px) {
+      .hero-ratings-quad { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+      .vadodara-zones-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+      .zone-hotline-card { flex-direction: column !important; align-items: flex-start !important; padding: 20px 18px !important; }
+      .hotline-card-actions { width: 100% !important; }
+      .hotline-card-actions .btn { width: 100% !important; justify-content: center !important; }
+    }
+    @media (max-width: 540px) {
+      .hero-ratings-quad { grid-template-columns: 1fr !important; }
+      .vadodara-zones-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
 
   <!-- Schema Markup (LocalBusiness & Service) -->
   <script type="application/ld+json">
@@ -257,31 +378,69 @@
           </div>
         </div>
 
-        <!-- Hero Stats Bar — Vadodara Ratings -->
-        <div class="hero-stats-bar">
-          <div class="hero-stat-item">
-            <div class="hero-stat-value">4.8<span class="hero-stat-star">&#9733;</span></div>
-            <div class="hero-stat-label">Customer Rating</div>
-            <div class="hero-stat-sub">Google Verified</div>
+        <!-- Hero Ratings Showcase: Divided into 4 Distinct Premium Parts -->
+        <div class="hero-ratings-quad">
+          
+          <!-- Part 1: Customer Rating -->
+          <div class="rating-quad-card">
+            <div class="quad-icon-wrap quad-gold">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="quad-content">
+              <div class="quad-value">4.8 <span class="quad-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+              <div class="quad-title">Google Verified</div>
+              <div class="quad-desc">450+ 5-Star Reviews in Vadodara</div>
+            </div>
           </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat-item">
-            <div class="hero-stat-value">Since <span class="hero-stat-year">2018</span></div>
-            <div class="hero-stat-label">Years in Business</div>
-            <div class="hero-stat-sub">Trusted &amp; Experienced</div>
+
+          <!-- Part 2: Established Years -->
+          <div class="rating-quad-card">
+            <div class="quad-icon-wrap quad-cyan">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="quad-content">
+              <div class="quad-value">Since <span class="quad-highlight">2018</span></div>
+              <div class="quad-title">Years in Business</div>
+              <div class="quad-desc">Vadodara's Trusted HVAC Leader</div>
+            </div>
           </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat-item">
-            <div class="hero-stat-value">500<span class="hero-stat-plus">+</span></div>
-            <div class="hero-stat-label">Happy Customers</div>
-            <div class="hero-stat-sub">Across Vadodara</div>
+
+          <!-- Part 3: Happy Customers -->
+          <div class="rating-quad-card">
+            <div class="quad-icon-wrap quad-green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="quad-content">
+              <div class="quad-value">500<span class="quad-highlight">+</span></div>
+              <div class="quad-title">Happy Clients</div>
+              <div class="quad-desc">Homes &amp; Commercial Spaces</div>
+            </div>
           </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat-item">
-            <div class="hero-stat-value"><span class="hero-stat-day">Same</span> Day</div>
-            <div class="hero-stat-label">Fast Response</div>
-            <div class="hero-stat-sub">Doorstep Dispatch</div>
+
+          <!-- Part 4: Same Day Response -->
+          <div class="rating-quad-card">
+            <div class="quad-icon-wrap quad-orange">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="quad-content">
+              <div class="quad-value"><span class="quad-highlight">Same</span> Day</div>
+              <div class="quad-title">Fast Response</div>
+              <div class="quad-desc">60-Min Doorstep Dispatch</div>
+            </div>
           </div>
+
         </div>
 
       </div>
@@ -591,52 +750,184 @@
   </section>
 
   
-  <!-- SERVICE AREAS IN VADODARA — Location Chips Section -->
-  <section class="section bg-ice" id="serviceAreas">
+  <!-- SERVICE AREAS IN VADODARA — 4-Zone Aligned Coverage Directory -->
+  <section class="section bg-ice vadodara-coverage-section" id="serviceAreas">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header text-center">
         <span class="badge-tag badge-light">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right:4px; vertical-align:-2px;">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
-          We Come to You
+          Doorstep Coverage
         </span>
-        <h2 class="section-title">AC Service Areas in<br><span class="gradient-text">Vadodara</span></h2>
-        <p class="section-desc">We cover all major neighborhoods across Vadodara. Same-day service available in most zones.</p>
+        <h2 class="section-title">AC Service Areas in <span class="gradient-text">Vadodara</span></h2>
+        <p class="section-desc">QuickCool operates 4 dedicated zonal dispatch centers across Vadodara for guaranteed 60-minute doorstep arrival.</p>
       </div>
 
-      <div class="location-chips-grid">
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Gorwa</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Gotri</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Tarsali</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> New Sama</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Tandalja</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Waghodia Road</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Fatehgunj</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Makarpura</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Manjalpur</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Nizampura</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Karelibagh</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Sayajiganj</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Soma Talav</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Subhanpura</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Harni</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Sevasi</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Vemali</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Chhani Jakatnaka</div>
-        <div class="location-chip"><svg class="loc-pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Khodiyar Nagar</div>
+      <!-- 4-Zone Structured Grid -->
+      <div class="vadodara-zones-grid">
+        
+        <!-- Zone 1: West Vadodara -->
+        <div class="zone-column-card">
+          <div class="zone-card-header">
+            <div class="zone-badge">West Vadodara</div>
+            <span class="zone-dispatch-time">&#9679; 30-45 Min Arrival</span>
+          </div>
+          <ul class="zone-locations-list">
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Gorwa</span>
+              <span class="zone-loc-tag">Express</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Gotri</span>
+              <span class="zone-loc-tag">Express</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Subhanpura</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Sevasi</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Tandalja</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Zone 2: Central & Alkapuri -->
+        <div class="zone-column-card">
+          <div class="zone-card-header">
+            <div class="zone-badge">Central &amp; Alkapuri</div>
+            <span class="zone-dispatch-time">&#9679; 30-45 Min Arrival</span>
+          </div>
+          <ul class="zone-locations-list">
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Sayajiganj</span>
+              <span class="zone-loc-tag">Express</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Fatehgunj</span>
+              <span class="zone-loc-tag">Express</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Nizampura</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Karelibagh</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Zone 3: South Vadodara -->
+        <div class="zone-column-card">
+          <div class="zone-card-header">
+            <div class="zone-badge">South Vadodara</div>
+            <span class="zone-dispatch-time">&#9679; 30-45 Min Arrival</span>
+          </div>
+          <ul class="zone-locations-list">
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Manjalpur</span>
+              <span class="zone-loc-tag">Express</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Makarpura</span>
+              <span class="zone-loc-tag">Express</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Tarsali</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Soma Talav</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Zone 4: North & East Express -->
+        <div class="zone-column-card">
+          <div class="zone-card-header">
+            <div class="zone-badge">North &amp; East Hub</div>
+            <span class="zone-dispatch-time">&#9679; 45-60 Min Arrival</span>
+          </div>
+          <ul class="zone-locations-list">
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">New Sama</span>
+              <span class="zone-loc-tag">Express</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Harni</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Vemali</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Waghodia Road</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Chhani Jakatnaka</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+            <li class="zone-location-item">
+              <span class="zone-loc-bullet"></span>
+              <span class="zone-loc-name">Khodiyar Nagar</span>
+              <span class="zone-loc-tag">Active</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="location-cta">
-        <p class="location-note">Don't see your area? Call us &mdash; we serve all of Vadodara &amp; nearby districts within 60 minutes.</p>
-        <a href="tel:+919876543210" class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px; vertical-align:-3px;">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          Check Your Area: +91 98765 43210
-        </a>
+      <!-- Hotline Callout Banner -->
+      <div class="zone-hotline-card">
+        <div class="hotline-card-info">
+          <div class="hotline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Don't see your specific Vadodara neighborhood or society?
+          </div>
+          <p class="hotline-subtitle">We dispatch certified technicians to all 19 zones and surrounding Vadodara outskirts within 60 minutes.</p>
+        </div>
+        <div class="hotline-card-actions">
+          <a href="tel:+919876543210" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Call Dispatch: +91 98765 43210
+          </a>
+          <a href="#bookingModal" class="btn btn-secondary open-booking-modal">Book Doorstep Visit</a>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -1002,6 +1293,6 @@
   </div>
 
   <!-- Master JavaScript -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=4.0"></script>
 </body>
 </html>

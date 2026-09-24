@@ -976,8 +976,110 @@ button, input, select, textarea {
 }
 
 /* ===================================================
-   HERO STATS BAR — Vadodara Ratings (4.8★ / Since 2018 / 500+ / Same Day)
+   HERO RATINGS SHOWCASE — Divided into 4 Distinct Parts
    =================================================== */
+.hero-ratings-quad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+  width: 100%;
+}
+
+.rating-quad-card {
+  background: rgba(7, 26, 43, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-md);
+  padding: 16px 14px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.rating-quad-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--secondary);
+  box-shadow: 0 12px 28px rgba(0, 184, 217, 0.25);
+}
+
+.quad-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quad-gold {
+  background: rgba(255, 215, 0, 0.15);
+  color: #FFD700;
+  border: 1px solid rgba(255, 215, 0, 0.32);
+}
+
+.quad-cyan {
+  background: rgba(0, 184, 217, 0.15);
+  color: var(--secondary);
+  border: 1px solid rgba(0, 184, 217, 0.32);
+}
+
+.quad-green {
+  background: rgba(32, 201, 151, 0.15);
+  color: var(--accent-green);
+  border: 1px solid rgba(32, 201, 151, 0.32);
+}
+
+.quad-orange {
+  background: rgba(255, 127, 80, 0.15);
+  color: #FF7F50;
+  border: 1px solid rgba(255, 127, 80, 0.32);
+}
+
+.quad-content {
+  flex: 1;
+}
+
+.quad-value {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.quad-stars {
+  color: #FFD700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.quad-highlight {
+  color: var(--secondary);
+}
+
+.quad-title {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.quad-desc {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Backward compatibility stats bar */
 .hero-stats-bar {
   display: flex;
   align-items: center;
@@ -1048,14 +1150,152 @@ button, input, select, textarea {
   align-self: center;
 }
 
-.site-header.scrolled ~ * .hero-stats-bar,
-.hero-slider-section .hero-stats-bar {
-  /* Stats bar always remains on hero dark background */
+/* ===================================================
+   VADODARA SERVICE AREAS — 4-Zone Aligned Coverage Directory
+   =================================================== */
+.vadodara-coverage-section {
+  background-color: var(--light);
 }
 
-/* ===================================================
-   LOCATION CHIPS — Service Areas in Vadodara
-   =================================================== */
+.vadodara-zones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.zone-column-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(8, 119, 201, 0.12);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.zone-column-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.zone-card-header {
+  background: linear-gradient(135deg, rgba(8, 119, 201, 0.08) 0%, rgba(0, 184, 217, 0.05) 100%);
+  border-bottom: 1px solid rgba(8, 119, 201, 0.12);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.zone-badge {
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.zone-dispatch-time {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #059669;
+}
+
+.zone-locations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.zone-location-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background var(--transition-fast);
+}
+
+.zone-location-item:last-child {
+  border-bottom: none;
+}
+
+.zone-location-item:hover {
+  background: var(--primary-light);
+}
+
+.zone-loc-bullet {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.zone-loc-name {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-main);
+  flex: 1;
+}
+
+.zone-loc-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(8, 119, 201, 0.1);
+  color: var(--primary);
+}
+
+.zone-hotline-card {
+  background: linear-gradient(135deg, #071A2B 0%, #0F3354 100%);
+  border-radius: var(--radius-md);
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #FFFFFF;
+  box-shadow: var(--shadow-lg);
+  flex-wrap: wrap;
+}
+
+.hotline-card-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hotline-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFFFFF;
+}
+
+.hotline-subtitle {
+  font-size: 0.9rem;
+  color: #CBD5E1;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.hotline-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Backward compatibility location chips */
 .location-chips-grid {
   display: flex;
   flex-wrap: wrap;
@@ -1087,10 +1327,6 @@ button, input, select, textarea {
   color: var(--primary);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-}
-
-.loc-pin {
-  font-size: 1rem;
 }
 
 .location-cta {
@@ -2565,7 +2801,48 @@ textarea.form-control {
   body {
     padding-bottom: 64px; /* for sticky bar */
   }
-  /* Hero stats bar: 2x2 grid on mobile */
+  /* Hero ratings quad: 2x2 grid on tablet/mobile */
+  .hero-ratings-quad {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .rating-quad-card {
+    padding: 12px 10px !important;
+    gap: 8px !important;
+  }
+  .quad-icon-wrap {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .quad-value {
+    font-size: 1.1rem !important;
+  }
+  .quad-title {
+    font-size: 0.72rem !important;
+  }
+  .quad-desc {
+    display: none !important;
+  }
+
+  /* Vadodara zones grid: 2 columns on tablet */
+  .vadodara-zones-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+  .zone-hotline-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 20px 18px !important;
+  }
+  .hotline-card-actions {
+    width: 100% !important;
+  }
+  .hotline-card-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Backward compatibility */
   .hero-stats-bar {
     padding: 14px 16px;
     gap: 0;
@@ -2581,10 +2858,18 @@ textarea.form-control {
   .hero-stat-value {
     font-size: 1.25rem;
   }
-  /* Location chips: smaller on mobile */
   .location-chip {
     padding: 8px 14px;
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-ratings-quad {
+    grid-template-columns: 1fr !important;
+  }
+  .vadodara-zones-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 
